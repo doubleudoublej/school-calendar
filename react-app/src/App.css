@@ -1,0 +1,300 @@
+/* Global dark theme and Notion-inspired styles */
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif;
+  background: #18181b;
+  color: #f3f3f7;
+}
+
+.app-content {
+  display: flex;
+  min-height: 100vh;
+  background: #18181b;
+  width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+/* Fix unwanted right gap and horizontal scroll */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Top Bar */
+.top-bar {
+  width: 100%;
+  background: #222226;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.profile-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+.profile-icon:hover {
+  box-shadow: 0 0 0 2px #6366f1;
+}
+.view-toggle {
+  background: #23232a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.view-toggle:hover {
+  background: #6366f1;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #222226;
+  color: #f3f3f7;
+  width: 260px;
+  padding: 2rem 1rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-right: 1px solid #23232a;
+}
+.sidebar .user-email {
+  font-size: 0.95rem;
+  color: #b3b3b9;
+  margin-bottom: 1rem;
+}
+.sidebar .filters {
+  margin-bottom: 2rem;
+}
+.sidebar .shortcut {
+  color: #6366f1;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s;
+}
+.sidebar .shortcut:hover {
+  color: #a5b4fc;
+}
+.mini-calendar {
+  background: #23232a;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Calendar View */
+.calendar-view {
+  flex: 1;
+  padding: 2rem;
+  background: #18181b;
+  display: flex;
+  flex-direction: column;
+}
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.calendar-grid {
+  display: grid;
+  grid-template-columns: 60px repeat(7, 1fr);
+  grid-auto-rows: 48px;
+  gap: 2px;
+  background: #23232a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.calendar-day {
+  background: #23232a;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #23232a;
+}
+.calendar-time {
+  background: #23232a;
+  color: #b3b3b9;
+  text-align: right;
+  padding-right: 0.5rem;
+  font-size: 0.95rem;
+  border-right: 1px solid #23232a;
+}
+.calendar-event {
+  background: #6366f1;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  margin: 2px;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 8px rgba(99,102,241,0.12);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.calendar-event:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(99,102,241,0.18);
+}
+
+/* Clubs Page */
+.clubs-page {
+  flex: 1;
+  padding: 2rem;
+  background: #18181b;
+}
+.club-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+.club-card {
+  background: #23232a;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.club-card:hover {
+  box-shadow: 0 4px 16px rgba(99,102,241,0.18);
+  transform: translateY(-2px) scale(1.03);
+}
+.club-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #6366f1;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+}
+.club-tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.club-tag {
+  background: #6366f1;
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.85rem;
+}
+
+/* Teams Page */
+.teams-page {
+  flex: 1;
+  padding: 2rem;
+  background: #18181b;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.team-card {
+  background: #23232a;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.team-card:hover {
+  box-shadow: 0 4px 16px rgba(99,102,241,0.18);
+  transform: translateY(-2px) scale(1.03);
+}
+.team-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  background: #6366f1;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+}
+.team-roster {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #b3b3b9;
+}
+.team-schedule {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #a5b4fc;
+}
+
+/* Login/Signup Page */
+.auth-page {
+  max-width: 400px;
+  margin: 4rem auto;
+  background: #23232a;
+  padding: 2rem;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.auth-page input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  border-radius: 6px;
+  border: none;
+  background: #18181b;
+  color: #fff;
+}
+.auth-page button {
+  width: 100%;
+  padding: 0.7rem;
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+.auth-page button:hover {
+  background: #818cf8;
+}
+.auth-page a {
+  color: #a5b4fc;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
